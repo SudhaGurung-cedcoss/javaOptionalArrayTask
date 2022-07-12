@@ -3,18 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    body{
+        display:flex; 
+        justify-content:center;
+        width:100%;
+        height:525px;
+
+     }
+
+    div{
+        background-color:rgba(224, 133, 58, 0.795) ;
+    }
+
+    p{
+      width: 100%;
+      height:15px;
+      text-align: center;
+    }
+    .p{
+       font-weight: bold;  
+       width: 100%;
+       height:5px;
+    }
+
+    .buttons{
+        background-color: rgba(224, 133, 58, 0.795) ;
+        height: 26px;
+        width:100%;
+        float: left;
+     }
+
+    .heading{
+       
+        width: 100%;
+        height: 40px;
+    }
+
+    table{
+        margin:0px;
+        align-content: center;
+        margin-top: 50px; 
+        width: 100%;
+        height: 400px;
+
+    }
+    
+    table,td,th{
+        border:solid 1px;
+        border-collapse: collapse;
+            padding: 5px;
+    }
+        
+    tr{
+        padding: 0px;
+        width: 100%;
+        height: 10px;
+        margin: 0px;
+    }
+
+    td{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .para{
+        margin-top: 2px; 
+        margin-bottom:2px;
+    }
+
+    label{
+        display: block;
+
+    }
+
+    ul{
+        margin: 2px; 
+        margin-bottom: 2px;
+    }
+
+    button{
+        margin: 5px;
+        display:inline;
+        height: 20px;
+        border-radius: 10px;
+    }
+
+    #button1{
+        background-color: blue; 
+        color:white; 
+    }
+  
+    #button2{
+        background-color:white; 
+        color:black; 
+    }
+  
+    #button3{
+        background-color:grey; 
+        color:black; 
+    }
+  
+    
+
+
+       
+    </style>
 </head>
-<body>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum distinctio corporis animi natus numquam, inventore minus excepturi dignissimos voluptate voluptatem nobis delectus doloremque, impedit at commodi obcaecati dolores perspiciatis placeat.Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum distinctio corporis animi natus numquam, inventore minus excepturi dignissimos voluptate voluptatem nobis delectus doloremque, impedit at commodi obcaecati dolores perspiciatis placeat.</p>  
-<ul><li>Lorem ipsum dolor sit amet consectetur.</li>
-    <li>adipisicing elit. Corrupti neque,</li> 
-    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-     <li> Autem dolore cum quos similique aliquid a, </li>   
-         <li>cumque blanditiis officiis recusandae voluptatibus esse velit</li>
-         <li>tenetur sunt numquam nemo placeat necessitatibus quisquam?</li>
-</ul>
-<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod impedit distinctio soluta eos repudiandae iusto velit ad. Tempora quasi suscipit voluptatem, consequatur molestiae, voluptate aperiam itaque ducimus voluptates doloribus sed?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia non ex neque, numquam tempora est, a fugiat fuga nemo perferendis rerum vel. Sed soluta pariatur nesciunt eaque ad eligendi cupiditate dicta modi? Libero inventore nihil necessitatibus, neque odit esse deleniti numquam illum in sit ducimus voluptate accusamus maxime, similique obcaecati dolor consequuntur vero ullam quam quibusdam magni porro recusandae asperiores. Aliquam nisi veniam, est doloremque unde hic, non debitis laborum voluptatem totam, labore atque quia asperiores nihil quaerat dolore? Aperiam placeat iure, eum repellat, quibusdam numquam dicta laudantium, voluptate ab corrupti aut molestias non cum assumenda cumque ipsam aliquam quas?</div>
+<body >
+ 
+<div>
+   <p class="p">KM Custom HTML Form Example Using AppleScript</p>
+       <p>  (by JMichaelTX)</p>
+           <table >
+        
+              <!--Name-->
+               <tr >
+                  <td ><b>Name :</b>  </td> 
+                  <td><Input type="text" name="name"></td>    
+              </tr>
+              <tr >
+                  <td><b>Email:  </b></td> 
+                 <td><Input type="email" name="email"></td>    
+             </tr>
+            <!---Password-->
+                 <tr >
+                    <td><b>Password : </b> </td> 
+                    <td><Input type="password" name="password"></td>  
+                 </tr>  
+            <!---Approval Required-->
+                <tr >
+                     <td>
+                        <b>Approval Required</b>
+                        <p class="para">click on the button or text to check/uncheck</p>
+                      </td> 
+                     <td>
+                        <label for="approval"><input type="checkbox">Do you Approve ?</label>
+                     </td>
+                </tr>
+    
+                <!----Pick your favourite-->
+                <tr >
+                     <td><b>Pick up your favourite</b>
+                        <p class="para">click on the button or text to select</p></td> 
+                     <td>
+                       <label for="choice"> Choice 1<input type="radio" name="checks" ></label>
+                       <label for="choice" >Choice 2<input type="radio" name="checks"></label>
+                       <label for="choice" > Choice 3<input type="radio"  name="checks"></label>
+                    </td>    
+                </tr>
+    
+    
+        <!--pop up menu-->
+                 <tr>
+                   <td>
+                       <b>Pop-up Menu
+                        </b>
+                     </td >
+
+                     <td>
+                        <select >
+                           <option value="">Textas---TX</option>
+                           <option value="">Textas---TX</option>
+                           <option value="">Textas---TX</option>
+                            <option value="">Textas---TX</option> 
+                        </select>
+                    </td>
+                </tr>
+    
+        <!---List-->
+                <tr>
+                      <td><b> List</b>
+                         <ul >  
+                          Setup option :
+                            <li>Number of rows to display</li>
+                            <li>Alllow Multi-select</li>
+                          </ul>
+            
+                         </td>
+                        <td>
+                            <select name="" id="" multiple>
+                                <option>DFGHDFHFH</option>
+                                <option>DFGHDFHFH</option>
+                                <option>DFGHDFHFH</option>
+                                <option>DFGHDFHFH</option>
+                            </select></td>
+              </tr>
+    
+        <!----Field ignored by KM-->
+                <tr>
+                      <td>
+                           <strong>Field ignored by KM</strong>
+                     </td>
+                     <td>
+                        <input type="text">
+                     </td>
+                 </tr>
+    
+        <!--Text Area-->
+                 <tr>
+                     <td><strong>Text Area</strong>
+                     </td>
+                     <td><textarea></textarea>
+                     </td>
+                </tr>
+       
+      </table>
+             <div class="buttons">
+                 <button id="button1" type="submit" >Save</button>
+                 <button id="button2" type="submit" >Cancel</button>
+                  <button id="button3" type="submit" >Resize</button>
+             </div>
+   
+    </div>
+   
+ 
+
+
 </body>
 </html>
