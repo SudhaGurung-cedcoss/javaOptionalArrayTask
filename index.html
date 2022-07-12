@@ -8,8 +8,10 @@
  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
   <link href="Style.css" rel="stylesheet" type="text/css">
   <style>
-  .penguin {
-    --penguin-skin: gray;
+ .penguin {
+    --penguin-skin: black;
+    --penguin-belly: gray;
+    --penguin-beak: yellow;
     position: relative;
     margin: auto;
     display: block;
@@ -19,12 +21,11 @@
   }
 
   .penguin-top {
-    
     top: 10%;
     left: 25%;
 
     /* Change code below this line */
-    background: var(--penguin-skin);
+    background: var(--pengiun-skin,black);
     /* Change code above this line */
 
     width: 50%;
@@ -37,7 +38,7 @@
     left: 23.5%;
 
     /* Change code below this line */
-    background: var(--penguin-skin);
+    background: var(--pengiun-skin,black);
     /* Change code above this line */
 
     width: 53%;
@@ -48,11 +49,7 @@
   .right-hand {
     top: 0%;
     left: -5%;
-
-    /* Change code below this line */
-    background: var(--penguin-skin);
-    /* Change code above this line */
-
+    background: var(--penguin-skin, black);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 120% 30%;
@@ -63,11 +60,7 @@
   .left-hand {
     top: 0%;
     left: 75%;
-
-    /* Change code below this line */
-    background: var(--penguin-skin);
-    /* Change code above this line */
-
+    background: var(--penguin-skin, black);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 30% 120%;
@@ -78,7 +71,7 @@
   .right-cheek {
     top: 15%;
     left: 35%;
-    background: white;
+    background: var(--penguin-belly, white);
     width: 60%;
     height: 70%;
     border-radius: 70% 70% 60% 60%;
@@ -87,7 +80,7 @@
   .left-cheek {
     top: 15%;
     left: 5%;
-    background: white;
+    background: var(--penguin-belly, white);
     width: 60%;
     height: 70%;
     border-radius: 70% 70% 60% 60%;
@@ -96,7 +89,7 @@
   .belly {
     top: 60%;
     left: 2.5%;
-    background: white;
+    background: var(--penguin-belly, white);
     width: 95%;
     height: 100%;
     border-radius: 120% 120% 100% 100%;
@@ -105,7 +98,7 @@
   .right-feet {
     top: 85%;
     left: 60%;
-    background: orange;
+    background: var(--penguin-beak, orange);
     width: 15%;
     height: 30%;
     border-radius: 50% 50% 50% 50%;
@@ -116,7 +109,7 @@
   .left-feet {
     top: 85%;
     left: 25%;
-    background: orange;
+    background: var(--penguin-beak, orange);
     width: 15%;
     height: 30%;
     border-radius: 50% 50% 50% 50%;
@@ -172,7 +165,7 @@
   .beak-top {
     top: 60%;
     left: 40%;
-    background: orange;
+    background: var(--penguin-beak, orange);
     width: 20%;
     height: 10%;
     border-radius: 50%;
@@ -181,14 +174,14 @@
   .beak-bottom {
     top: 65%;
     left: 42%;
-    background: orange;
+    background: var(--penguin-beak, orange);
     width: 16%;
     height: 10%;
     border-radius: 50%;
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
