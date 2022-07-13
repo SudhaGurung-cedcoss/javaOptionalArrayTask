@@ -8,87 +8,151 @@
     <style>
        
        body{
-     width: 1300px;
-        height: 500px;
-        background-color: rgb(212, 245, 234);
+          width: 1300px;
+          height: 636px;
+          background-color: rgba(68, 65,65, 0.103);
+       }
+
+       .main{
+       
+       background-color: rgba(68, 65, 65, 0.103);
+       margin-left:30px ;
+       width: 1280px;
+       height: 630px;
+   
        }
 
        .side{
-       
-       background-color: rgb(212, 245, 234);
-       display: inline;
-       float: left;
-       width: 700px;
-       height: 550px;
-   
-       }
-    .main{
-       
-       background-color: rgb(212, 245, 234);
-       display: flex;
-       justify-content: space-around;
-       width: 600px;
-       height: 250px;
-       margin: 30px;
-     }
-    
-     #img
-     {
 
-        width: 700px;
-        height: 490px;
-        background-color: rgb(212, 245, 234); 
-        margin: 15px;
-        padding: 10px; 
-     }
-
-     img{
-        margin: 20px;
-        width: 96%;
-        height: 96%;
-        float: left;
-    
-     }
-    .item{
+        background-color:rgba(68, 65, 65, 0.103);
+        margin-top: 12px;
         width: 300px;
-        height: 200px;
-        padding: 25px;
-        margin: 20px;
-        background-color: bisque;
+        display: inline;
+        float: left;
+        height: 560px;
+        border-bottom: solid black;
+        border-top: solid black;
+        border-right: solid;
+        
+       }
+    
+       .rightside{
+
+         background-color:#c4e9b1;
+         margin-top: -566px;
+         margin-left: 303px;
+         width: 978px;
+         display: inline;
+         float: left;
+         height: 560px;
+         border-top: solid;
+         border-bottom: solid;
+
       }
+
+      table{
+        display: flex;
+         justify-content: center;
+         border: solid grey 2px;
+         height: 247px;
+         width: 543px;
+         margin-top: 36px;
+        margin-left: 230px;
+         margin-right: 57px;
+        }
+
+       td{
+        padding: 10px;
+      }
+     
+      button{
+        border-radius: 10px;
+     }
+
+     #box{
+
+    border-radius: 0px 0px 10px 10px;
+    border: solid grey 2px;
+    width: 499px;
+    height: 181px;
+    margin-top: 22px;
+    margin-left: 230px;
+    margin-right: 57px;
+    padding-left: 20px;
+    padding-right: 20px;
+      }
+
+    h1{
+     text-align: center;
+     margin: 0px;
+     padding: 10px;
+    
+     }
+
+    h3 {
+    
+    font-size: 1.17em;
+    text-align: center;
+    font-weight: bold;
+
+    }
+   
+    ul{
+    margin-top: 67px;
+    margin-left: 25px;
+   }
+
+   ul>li{
+    padding: 5px;
+   }
     </style>
 </head>
 <body >
-<div class="side">
-    <img src="pexels-blaque-x-863963.jpg" alt="image is not found">
-   </div>
+  <div class="main">
+     <h1>Assignment 7</h1>
+       <div class="side">
+         <ul type="none">
+           <li><b>Home</b></li>
+           <li><b>Mids Labs</b></li>
+           <li><b>Tom Thumb</b></li>
+         </ul>
+       </div>
 
-<div class="main">
-    <div class="item" >
-       <b>About us</b>
-       <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-       <a href="#">View more</a>
-           </div>
-    <div class="item" >
-        <b>What We do</b>
-        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-        <a href="">View more</a>
-          </div>
- </div>
-     <div class="main">
-        <div class="item" >
-            <b>How we work</b>
-            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-            <a href="">View more</a>
-                  </div>
-        <div class="item" >
-            <b>contact us</b>
-            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-            <a href="">View more</a> 
-                   </div>
-       
-    </div>
- 
+    <div class="rightside">
+        <table>
+            <h3>Mads Libs</h3>
+             <tr>
+               <td>Person Name</td>
+               <td><input type="text"></td>
+             </tr>
+             
+             <tr>
+                <td>Character</td>
+                <td><input type="text"></td>
+            </tr>
 
+            <tr>
+                 <td>Adverb</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Adjective</td>
+                <td><input type="text"></td>
+            </tr>
+                     
+            <tr>
+                <td></td> 
+                <td><button type="submit">Tell Story</button></td>  
+            </tr>  
+    </table>
+        
+    <div id="box">
+            <h3>Wendy's Crazy MadLibs Story</h3>
+                <p>One day, my friend Superman was visiting New York and ran into Batman. Superman ran quickly to meet Batman. But Batman turned out to be very mean and Superman did not enjoy the meeting.</p>
+        
+        </div>
+     </div>       
+  </div>
 </body>
 </html>
