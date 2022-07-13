@@ -6,221 +6,89 @@
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Document</title>
     <style>
-    body{
-        display:flex; 
-        justify-content:center;
-        width:100%;
-        height:525px;
+       
+       body{
+     width: 1300px;
+        height: 500px;
+        background-color: rgb(212, 245, 234);
+       }
 
+       .side{
+       
+       background-color: rgb(212, 245, 234);
+       display: inline;
+       float: left;
+       width: 700px;
+       height: 550px;
+   
+       }
+    .main{
+       
+       background-color: rgb(212, 245, 234);
+       display: flex;
+       justify-content: space-around;
+       width: 600px;
+       height: 250px;
+       margin: 30px;
+     }
+    
+     #img
+     {
+
+        width: 700px;
+        height: 490px;
+        background-color: rgb(212, 245, 234); 
+        margin: 15px;
+        padding: 10px; 
      }
 
-    div{
-        background-color:rgba(224, 133, 58, 0.795) ;
-    }
-
-    p{
-      width: 100%;
-      height:15px;
-      text-align: center;
-    }
-    .p{
-       font-weight: bold;  
-       width: 100%;
-       height:5px;
-    }
-
-    .buttons{
-        background-color: rgba(224, 133, 58, 0.795) ;
-        height: 26px;
-        width:100%;
+     img{
+        margin: 20px;
+        width: 96%;
+        height: 96%;
         float: left;
+    
      }
-
-    .heading{
-       
-        width: 100%;
-        height: 40px;
-    }
-
-    table{
-        margin:0px;
-        align-content: center;
-        margin-top: 50px; 
-        width: 100%;
-        height: 400px;
-
-    }
-    
-    table,td,th{
-        border:solid 1px;
-        border-collapse: collapse;
-            padding: 5px;
-    }
-        
-    tr{
-        padding: 0px;
-        width: 100%;
-        height: 10px;
-        margin: 0px;
-    }
-
-    td{
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .para{
-        margin-top: 2px; 
-        margin-bottom:2px;
-    }
-
-    label{
-        display: block;
-
-    }
-
-    ul{
-        margin: 2px; 
-        margin-bottom: 2px;
-    }
-
-    button{
-        margin: 5px;
-        display:inline;
-        height: 20px;
-        border-radius: 10px;
-    }
-
-    #button1{
-        background-color: blue; 
-        color:white; 
-    }
-  
-    #button2{
-        background-color:white; 
-        color:black; 
-    }
-  
-    #button3{
-        background-color:grey; 
-        color:black; 
-    }
-  
-    
-
-
-       
+    .item{
+        width: 300px;
+        height: 200px;
+        padding: 25px;
+        margin: 20px;
+        background-color: bisque;
+      }
     </style>
 </head>
 <body >
- 
-<div>
-   <p class="p">KM Custom HTML Form Example Using AppleScript</p>
-       <p>  (by JMichaelTX)</p>
-           <table >
-        
-              <!--Name-->
-               <tr >
-                  <td ><b>Name :</b>  </td> 
-                  <td><Input type="text" name="name"></td>    
-              </tr>
-              <tr >
-                  <td><b>Email:  </b></td> 
-                 <td><Input type="email" name="email"></td>    
-             </tr>
-            <!---Password-->
-                 <tr >
-                    <td><b>Password : </b> </td> 
-                    <td><Input type="password" name="password"></td>  
-                 </tr>  
-            <!---Approval Required-->
-                <tr >
-                     <td>
-                        <b>Approval Required</b>
-                        <p class="para">click on the button or text to check/uncheck</p>
-                      </td> 
-                     <td>
-                        <label for="approval"><input type="checkbox">Do you Approve ?</label>
-                     </td>
-                </tr>
-    
-                <!----Pick your favourite-->
-                <tr >
-                     <td><b>Pick up your favourite</b>
-                        <p class="para">click on the button or text to select</p></td> 
-                     <td>
-                       <label for="choice"> Choice 1<input type="radio" name="checks" ></label>
-                       <label for="choice" >Choice 2<input type="radio" name="checks"></label>
-                       <label for="choice" > Choice 3<input type="radio"  name="checks"></label>
-                    </td>    
-                </tr>
-    
-    
-        <!--pop up menu-->
-                 <tr>
-                   <td>
-                       <b>Pop-up Menu
-                        </b>
-                     </td >
+<div class="side">
+    <img src="pexels-blaque-x-863963.jpg" alt="image is not found">
+   </div>
 
-                     <td>
-                        <select >
-                           <option value="">Textas---TX</option>
-                           <option value="">Textas---TX</option>
-                           <option value="">Textas---TX</option>
-                            <option value="">Textas---TX</option> 
-                        </select>
-                    </td>
-                </tr>
-    
-        <!---List-->
-                <tr>
-                      <td><b> List</b>
-                         <ul >  
-                          Setup option :
-                            <li>Number of rows to display</li>
-                            <li>Alllow Multi-select</li>
-                          </ul>
-            
-                         </td>
-                        <td>
-                            <select name="" id="" multiple>
-                                <option>DFGHDFHFH</option>
-                                <option>DFGHDFHFH</option>
-                                <option>DFGHDFHFH</option>
-                                <option>DFGHDFHFH</option>
-                            </select></td>
-              </tr>
-    
-        <!----Field ignored by KM-->
-                <tr>
-                      <td>
-                           <strong>Field ignored by KM</strong>
-                     </td>
-                     <td>
-                        <input type="text">
-                     </td>
-                 </tr>
-    
-        <!--Text Area-->
-                 <tr>
-                     <td><strong>Text Area</strong>
-                     </td>
-                     <td><textarea></textarea>
-                     </td>
-                </tr>
+<div class="main">
+    <div class="item" >
+       <b>About us</b>
+       <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+       <a href="#">View more</a>
+           </div>
+    <div class="item" >
+        <b>What We do</b>
+        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        <a href="">View more</a>
+          </div>
+ </div>
+     <div class="main">
+        <div class="item" >
+            <b>How we work</b>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <a href="">View more</a>
+                  </div>
+        <div class="item" >
+            <b>contact us</b>
+            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+            <a href="">View more</a> 
+                   </div>
        
-      </table>
-             <div class="buttons">
-                 <button id="button1" type="submit" >Save</button>
-                 <button id="button2" type="submit" >Cancel</button>
-                  <button id="button3" type="submit" >Resize</button>
-             </div>
-   
     </div>
-   
  
-
 
 </body>
 </html>
