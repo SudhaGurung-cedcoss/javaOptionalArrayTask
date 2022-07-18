@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexcontainer{
+            display: flex;
+            flex-direction: row;
+            margin-top: 136px;
+            margin-left: 258px;
+        }
+
+        .item{
+            width: 58px;
+            height: 52vh;
+            font-size: 34px;
+        }
+        #btn1{
+            background-color: rgb(189 185 185 / 43%);
+            width: 54px;
+            height: 45px;
+            border-radius: 10px 1px 1px 10px;
+            border-right: none;
+        }
+
+        #btn2{
+            background-color: white;
+            text-align: center;
+            padding-top: 3px;
+            width: 63px;
+            border: 2px solid;
+            margin-top: 2px;
+            margin-left: -5px;
+            height: 40px;
+            font-size: 20px;
+        }
+        
+        #btn3{
+            background-color: rgb(189 185 185 / 43%);
+            width: 52px;
+            height: 45px;
+            border-radius: 1px 10px 10px 1px;
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexcontainer">
+        <div class="item">
+            <button type="submit" onclick="decreament(btn2)" id="btn1">-</button>
+        </div>
+        <div class="item">
+            <p id="btn2">3</p>
+        </div>
+        <div class="item">
+            <button type="submit" onclick="Increament(btn2)" id="btn3">+</button>
+        </div>
+    </div>
+
+    <script>
+        function decreament(n1)
+        {   
+            var x=  document.getElementById('btn2').innerText;
+           document.getElementById('btn2').innerText=--x;
+
+        }
+
+        function Increament(n2)
+        { var x=  document.getElementById('btn2').innerText;
+          document.getElementById('btn2').innerText=++x;
+
+        }
+    </script>
+</body>
+</html>
