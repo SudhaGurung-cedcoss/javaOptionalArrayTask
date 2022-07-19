@@ -38,7 +38,11 @@
         </tr>
     </Table>
 
-    <label id="result"></label>
+    
+      <span id="f1"></span>
+      <span id="f2"></span>
+
+   
    
   </div>
   
@@ -51,18 +55,18 @@
         if(x>=5 && x<=7)
         {
          if(y>=15 && y<=20)
-         {   var f1='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=f1;
+         {   document.getElementById('f1').innerHTML="keep it up";
+         document.getElementById('f2').style.display="none";
          }
          else if(y>20)
          { 
-            var f2='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=f2;
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var f='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=f;
-
+            
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
          }
         }
         
@@ -70,19 +74,18 @@
         {
          if(y>=21 && y<=25)
          {
-            // document.getElementById('result').innerText="keep it up";
-            var ff='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=ff;
+            document.getElementById('f1').innerHTML="keep it up";
+            document.getElementById('f2').style.display="none";
          
          }
          else if(y>20)
          {
-            var ff2='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=ff2;
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var ff3='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=ff3;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -91,17 +94,18 @@
         {
          if(y>=26 && y<=30)
          {
-            var g='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=g;
+            document.getElementById('f1').innerHTML="keep it up";
+            document.getElementById('f2').style.display="none";
             
          }
          else if(y>30)
-         {  var g1='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=g1;
+         { 
+             document.getElementById('f2').innerHTML="Overweight";
+             document.getElementById('f1').style.display="none";
          }
          else{
-            var g2='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=g2;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -109,16 +113,17 @@
         if(x>=16 && x<=20)
         {
          if(y>=31 && y<=40)
-         {    var mn='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=mn;
+         {  document.getElementById('f1').innerHTML="keep it up";
+         document.getElementById('f2').style.display="none";
          }
          else if(y>40)
-         {    var mno='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=mno;
+         {  
+             document.getElementById('f2').innerHTML="Overweight";
+             document.getElementById('f1').style.display="none";
          }
          else{
-            var ffg='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=fgg;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -126,16 +131,17 @@
         if(x>=21 && x<=26)
         {
          if(y>=41 && y<=50)
-         {    var mn='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=mn;
+         {    document.getElementById('f1').innerHTML="keep it up";
+         document.getElementById('f2').style.display="none";
          }
          else if(y>50)
-         {    var mno='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=mno;
+         {   
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var ffg='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=fgg;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -143,16 +149,17 @@
         if(x>=27 && x<=32)
         {
          if(y>=51 && y<=60)
-         {    var mn1='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=mn1;
+         {    document.getElementById('f1').innerHTML="keep it up";
+             document.getElementById('f2').style.display="none";
          }
          else if(y>60)
-         {    var mn2='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=mn2;
+         {    
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var mn3='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=mn3;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -160,16 +167,17 @@
         if(x>=32 && x<=38)
         {
          if(y>=61 && y<=70)
-         {    var oo='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=oo;
+         {    document.getElementById('f1').innerHTML="keep it up";
+             document.getElementById('f2').style.display="none";
          }
          else if(y>70)
-         {    var mm='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=mm;
+         {   
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var nn='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=nn;
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
 
          }
         }
@@ -177,17 +185,18 @@
         if(x>=39 && x<=44)
         {
          if(y>=71 && y<=80)
-         {    var mn='<span style="color:green">keep it up</span>';
-            document.getElementById('result').innerHTML=mn;
+         {   
+            document.getElementById('f1').innerHTML="keep it up";
+            document.getElementById('f2').style.display="none";
          }
          else if(y>80)
-         {    var mno='<span style="color:red">overweight</span>';
-            document.getElementById('result').innerHTML=mno;
+         {    
+            document.getElementById('f2').innerHTML="Overweight";
+            document.getElementById('f1').style.display="none";
          }
          else{
-            var ffg='<span style="color:red">underweight</span>';
-            document.getElementById('result').innerHTML=fgg;
-
+            document.getElementById('f2').innerHTML="underweight";
+            document.getElementById('f1').style.display="none";
          }
         }
         
