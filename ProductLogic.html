@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div class="container">
+        <table id="table1">
+            <tr class="tr1">
+                <td class="left">Product Id</td>
+                <td><input type="text" id="productid"></td>
+            </tr>
+            <tr class="tr1">
+                <td class="left">Product Name</td>
+                <td><input type="text" id="productname"></td>
+            </tr>
+            <tr class="tr1">
+                <td class="left">Product Price</td>
+                <td><input type="text" id="productprice"></td>
+            </tr>
+            <tr class="tr1">
+                <td></td>
+                <td><button id="btn"  type="submit" onclick="mydata()">Add Product</button></td>
+            </tr>
+        </table>
+
+         
+
+    <table id="table2">
+        <thead>
+            <tr>
+                <td class="heading">Product Id</td>
+                <td class="heading">Product Name</td>
+                <td class="heading">Product Price</td>
+            </tr>
+        </thead>
+       <tbody id="display">
+
+
+       </tbody>
+    </table>
+    
+    <script>
+        function mydata(){
+        const productInfo=[];
+        var x=document.getElementById('productid').value;
+        var y=document.getElementById('productname').value;
+        var z=document.getElementById('productprice').value;
+        productInfo.push([x,y,z]);
+
+        let text='<tr>';
+            productInfo.forEach(myfunction);
+            
+            function myfunction(value){
+                text+='<td>'+value[0]+'</td>';
+                text+='<td>'+value[1]+'</td>';
+                text+='<td>'+value[2]+'</td>';
+            }
+
+            text+='</tr>';
+                
+          document.getElementById('display').innerHTML+=text;
+
+        }
+    </script>
+</body>
+</html>
