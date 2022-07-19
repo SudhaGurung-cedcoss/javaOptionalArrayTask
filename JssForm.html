@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container">
+
+    <Table>
+        <tr>
+            <td>
+                <Label>AGE</Label>
+            </td>
+            <td>
+                <input type="text" id="age" placeholder="Enter Age">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <Label>WEIGHT</Label>
+            </td>
+            <td>
+                <input type="text" id="weight" placeholder="Enter weight">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <button type="button" id="btn" onclick="submit()">Submit</button>
+            </td>
+        </tr>
+    </Table>
+
+    <label id="result"></label>
+   
+  </div>
+  
+  <script>
+    function submit()
+    {
+        var x=document.getElementById('age').value;
+        var y=document.getElementById('weight').value;
+
+        if(x>=5 && x<=7)
+        {
+         if(y>=15 && y<=20)
+         {   var f1='<span style="color:green">keep it up</span>';
+            document.getElementById('result').innerHTML=f1;
+         }
+         else if(y>20)
+         { 
+            var f2='<span style="color:red">overweight</span>';
+            document.getElementById('result').innerHTML=f2;
+         }
+         else{
+            var f='<span style="color:red">underweight</span>';
+            document.getElementById('result').innerHTML=f;
+
+         }
+        }
+        
+        if(x>=8 && x<=10)
+        {
+         if(y>=21 && y<=25)
+         {
+            // document.getElementById('result').innerText="keep it up";
+            var ff='<span style="color:green">keep it up</span>';
+            document.getElementById('result').innerHTML=ff;
+         
+         }
+         else if(y>20)
+         {
+            var ff2='<span style="color:red">overweight</span>';
+            document.getElementById('result').innerHTML=ff2;
+         }
+         else{
+            var ff3='<span style="color:red">underweight</span>';
+            document.getElementById('result').innerHTML=ff3;
+
+         }
+        }
+
+        if(x>=11 && x<=15)
+        {
+         if(y>=26 && y<=30)
+         {
+            var g='<span style="color:green">keep it up</span>';
+            document.getElementById('result').innerHTML=g;
+            
+         }
+         else if(y>30)
+         {  var g1='<span style="color:red">overweight</span>';
+            document.getElementById('result').innerHTML=g1;
+         }
+         else{
+            var g2='<span style="color:red">underweight</span>';
+            document.getElementById('result').innerHTML=g2;
+
+         }
+        }
+
+        if(x>=16 && x<=20)
+        {
+         if(y>=31 && y<=40)
+         {    var mn='<span style="color:green">keep it up</span>';
+            document.getElementById('result').innerHTML=mn;
+         }
+         else if(y>40)
+         {    var mno='<span style="color:red">overweight</span>';
+            document.getElementById('result').innerHTML=mno;
+         }
+         else{
+            var ffg='<span style="color:red">underweight</span>';
+            document.getElementById('result').innerHTML=fgg;
+
+         }
+        }
+        
+    }
+  </script>
+</body>
+</html>
