@@ -50,25 +50,25 @@
 <body>
     <div class="flexcontainer">
         <div class="item">
-            <button type="submit" onclick="decreament(btn2)" id="btn1">-</button>
+            <button type="submit" onclick="decreament()" id="btn1">-</button>
         </div>
         <div class="item">
             <p id="btn2">3</p>
         </div>
         <div class="item">
-            <button type="submit" onclick="Increament(btn2)" id="btn3">+</button>
+            <button type="submit" onclick="Increament()" id="btn3">+</button>
         </div>
     </div>
 
     <script>
-        function decreament(n1)
+        function decreament()
         {   
             var x=  document.getElementById('btn2').innerText;
            document.getElementById('btn2').innerText=--x;
 
         }
 
-        function Increament(n2)
+        function Increament()
         { var x=  document.getElementById('btn2').innerText;
           document.getElementById('btn2').innerText=++x;
 
