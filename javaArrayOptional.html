@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javascriptOptionaltask.css">
+</head>
+<body>
+   <form action="">
+    <div class="container">
+        <label id="label">Mobiles</label> <select onclick="myfunction()" id="product"><option value="">----------Select----------</option>
+            <option value="0" class="option">iPhone</option>
+            <option value="1" class="option">Windows</option>
+            <option value="2" class="option">nokia</option>
+            <option value="3" class="option">redme</option>
+        </select>
+    </div>
+   </form> 
+   <table>
+    <thead>
+        <tr>
+            <td>Product Name</td>
+            <td>Model Number</td>
+            <td>Price</td>
+            <td>Availibilty</td>
+        </tr>
+    </thead>
+    <tbody id="display">
+
+    </tbody>
+   </table>
+   <script>
+    function myfunction(){
+   const arr=[{"ProductName":"iPhone","ModelNumber":"i11","Price":"150000","Availibity":"true"},{"ProductName":"Windows","ModelNumber":"i11","Price":"150000","Availibity":"true"},{"ProductName":"nokia","ModelNumber":"M30","Price":"10000","Availibity":"false"},{"ProductName":"redme","ModelNumber":"4A","Price":"15000","Availibity":"false"}]
+   //const iPhone=[{"ProductName":"iPhone"},{"ModelNumber":"i11"},{"Price":"150000"},{"Availibity":"true"}];
+    var x= document.getElementById('product').value;
+    let text='<tr>';
+      text+='<td>'+ arr[x].ProductName +'</td>'+'<td>'+arr[x].ModelNumber+'</td>'+'<td>'+arr[x].Price+'</td>'+'<td>'+arr[x].Availibity+'</td>';
+      text+='<tr>';
+     document.getElementById('display').innerHTML=text;
+      }
+   </script>
+</body>
+</html>
