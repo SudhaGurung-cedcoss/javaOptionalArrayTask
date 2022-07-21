@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+     <select name="" id="sel1" size="4"  multiple>
+        
+    </select>
+
+    <button onclick="myfun()" type="button">
+        >>
+    </button>
+
+    <select name="" id="sel2" size="4">
+       
+        
+    </select>
+    </div>
+    
+    <script>
+        var arrFrom=["Option1","Option2","Option3","Option4"];
+        var arrTo=[];
+        var selFrom=document.getElementById("sel1");
+        var selTo=document.getElementById("sel2");
+        for (i=0;i<arrFrom.length;i++)
+        {
+            var opt =document.createElement('option');
+            opt.textContent=arrFrom[i];
+            selFrom.appendChild(opt);
+            console.log(arrFrom);
+        }
+
+       function myfun(){
+         
+                selFrom=document.getElementById('sel1');
+                 for(i=0;i<arrFrom.length;i++) {
+                    if(selFrom.options[i].selected)
+                    {
+                        var index=selFrom.options[i].index;
+                        var temp=arrFrom.splice(index,1);
+                        arrTo.push(temp[0]);
+                       console.log(arrTo);
+                       selFrom.remove(index);
+                       i--; 
+                    }
+                   
+                  }
+
+                
+                 for (let j=0;j<arrTo.length;j++)
+                  {
+                     var opt1 =document.createElement('option');
+                     opt1.textContent=arrTo[j];
+                     selTo.appendChild(opt1);
+                     console.log(selTo);
+                }
+                
+            }
+         
+    
+
+        
+         // var text;
+      //for (let i = 0; i< selection.length; i++) {    
+       //text+='<option>'+selection[i]+'</option>';
+   
+     //  document.getElementById('box2').innerHTML+=text;
+   //alert(arr1);
+  
+       
+   
+    </script>
+</body>
+</html>
