@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    text-align: center;
+}
+
+#box{
+    
+    border: 2px solid black;
+    width: 40%;
+    align-items: center;
+    height: 90vh;
+    font-size: 14px;
+    font-family: ubuntu;
+    margin-left: 312px;
+    
+}
+ #table1{
+    text-align: center;
+    width: 89%;
+    margin-left: 3px;
+    margin-top: 13px;
+ }
+.input{
+    height: 5vh;
+    width: 100%;
+}
+#sel1{
+    height: 6vh;
+    width: 101%;
+    text-align: center;
+}
+
+#Deliverytime{
+    width: 101%;
+    height: 6vh;
+    text-align: center;
+}
+
+#box2{
+    border: 2px solid black;
+    width: 40%;
+    align-items: center;
+    height: 60vh;
+    margin-top: 40px;
+    font-size: 14px;
+    font-family: ubuntu;
+    margin-left: 312px;
+    display: none;
+}
+
+#heading{
+    margin-top: 60px;
+    margin-left: -28px;
+}
+
+#table2{
+    text-align: center;
+    width: 100%;
+    height: 40vh;
+    margin-left: 0px;
+    margin-top: 13px;
+}
+
+#btn{
+
+    height: 7vh;
+    width: 34%;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 54px;
+}
