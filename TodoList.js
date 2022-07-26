@@ -30,9 +30,9 @@ function inComplete(args){
     let index=nodes.indexOf(li);
     
     var data=IncompletedArray[index];
-  //  completeArray.push(data);
+   completeArray.push(data);
     //alert(completeArray);
-    completeArray.splice(index,0,data);
+    //completeArray.splice(index,0,data);
     //console.log(completeArray);
     IncompletedArray.splice(index,1);
     
@@ -58,9 +58,9 @@ function moveToIncomplete(args){
     let index=nodes.indexOf(li);
     
     var data=completeArray[index];
-   //IncompleteArray.push(data);
+   IncompletedArray.push(data);
    // alert(IncompletedArray);
-    IncompletedArray.splice(index,0,data);
+   // IncompletedArray.splice(index,0,data);
    // console.log(completeArray);
     completeArray.splice(index,1);
     
