@@ -1,17 +1,68 @@
-table{
+#table1{
     height: 50vh;
-    width: 65%;
+    width: 38%;
     border: 2px solid black;
+    margin-left: 460px;
+    margin-top: -180px;
+    
 }
+
+#table2{
+    width: 35%;
+    margin-top: 20px;
+    height: 20vh;
+    
+    
+    
+}
+
 
 tr:nth-child(even){
     background-color: rgb(146, 238, 238);
 
 }
-thead {
+#thead {
     background-color: burlywood;
+}
+#thead2 {
+    background-color: burlywood;
+    width: 90%;
+    display: none;
+
+}
+#thead2 td{
+    text-align: center;
+    padding-left: 19px;
 }
 
 td{
     text-align: center;
+}
+#dropdown{
+    width: 9%;
+    height: 5vh;
+    text-align: center;
+    background-color: rgb(146, 238, 238);
+    font-size: 14px;
+    font-family: ubuntu;
+}
+#display td{
+    text-align: center;
+    padding-left: 37px;
+}
+#searchItem{
+    width: 16%;
+    height: 4vh;
+    text-align: center;
+    background-color: rgb(146 238 238 / 0%);
+    font-size: 14px;
+    font-family: ubuntu;
+}
+#btn{
+    width: 8%;
+    height: 5vh;
+    text-align: center;
+    background-color: rgb(146, 238, 238);
+    font-size: 16px;
+    font-family: ubuntu;
 }

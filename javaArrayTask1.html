@@ -8,13 +8,34 @@
     <link rel="stylesheet" href="javaArrayTask1.css">
 </head>
 <body>
+<select name="" id="dropdown">
+    <option value="" class="option">---select Field---</option>
+    <option value="Company" class="option">Company</option>
+    <option value="Model" class="option">Model</option>
+    <option value="Memory" class="option">Memory(GB)</option>
+    <option value="Price" class="option">Price</option>
+</select>
+<input type="text" name="" id="searchItem"><button onclick="search()" id="btn">Search</button>
+<table id="table2">
+    <thead id="thead2">
+        <td id="company"  >Company</td>
+        <td id="model" >Model</td>
+        <td id="Memory">Memory(GB)</td>
+        <td id="Price" >Price(rs)</td>
+       
+    </thead>
+    <tbody id="display">
+       
 
-    <table>
-        <thead>
-            <td>Company</td>
-            <td>Model</td>
-            <td>Memory(GB)</td>
-            <td>Price(rs)</td>
+    </tbody>
+</table>
+
+    <table id="table1">
+        <thead id="thead">
+            <td id="company" >Company</td>
+            <td id="model">Model</td>
+            <td id="Memory">Memory(GB)</td>
+            <td id="Price">Price(rs)</td>
            
         </thead>
         <tbody id="tbody">
@@ -22,6 +43,7 @@
            
         </tbody>
     </table>
+    
 
     <script src="javaArrayTask1.js"></script>
     
