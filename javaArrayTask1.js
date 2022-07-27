@@ -1,12 +1,14 @@
-const arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':'15000'},
+var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':'15000'},
 {'Company':'Nokia','Model':'S370','Memory':'128 ','Price':'22000'},
 {'Company':'Apple','Model':'S12','Memory':'64 ','Price':'25000'},
 {'Company':'Xiaomi','Model':'Note','Memory':'32 ','Price':'12000'},
 {'Company':'Motarola','Model':'G10','Memory':'32 ','Price':'15000'}];
 
+printer(arr);
+function printer(arr){
 
     var text="";
-    for (i=0;i<arr.length;i++) {
+    for (var i=0;i<arr.length;i++) {
         text+='<tr>';
         text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>';
     }
@@ -14,6 +16,99 @@ const arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':'15000'}
     
     text+='</tr>';
     document.getElementById('tbody').innerHTML=text;
+
+}
+ 
+   function sorting(){
+  
+    var sort=document.getElementById('sort').value;
+    
+    var sort_by=document.getElementById('sort_by').value;
+    //   alert(sort_by);
+      if(sort=="-1")
+        sort_by="Company";
+        if(sort=="asc"){
+            if(sort_by=="Company" || sort_by=="Model") {
+                arr= arr.sort((a,b)=>{
+                let companyA=a.Company.toLowerCase();
+                let companyB=b.Company.toLowerCase();
+        
+                if (companyA < companyB) {
+                    return -1;
+                }
+                if (companyA > companyB) {
+                    return 1;
+                }
+                return 0;
+            });
+            document.getElementById('tbody').innerHTML="";
+            printer(arr);
+            console.log(arr);
+            }
+
+
+            if(sort_by=="Memory") {
+                arr= arr.sort((a,b)=>{
+                return a.Memory-b.Memory
+            });
+            document.getElementById('tbody').innerHTML="";
+            printer(arr);
+            console.log(arr);
+            }
+
+            if(sort_by=="Price") {
+                arr= arr.sort((a,b)=>{
+                return a.Price-b.Price
+            });
+            document.getElementById('tbody').innerHTML="";
+            printer(arr);
+            console.log(arr);
+            }
+        }
+
+        if(sort=="dsc"){
+            if(sort_by=="Company" || sort_by=="Model"){
+           arr= arr.sort((a,b)=>{
+                let companyA=a.Company.toLowerCase();
+                let companyB=b.Company.toLowerCase();
+        
+                if (companyA > companyB) {
+                    return -1;
+                }
+                if (companyA < companyB) {
+                    return 1;
+                }
+                return 0;
+            });
+            document.getElementById('tbody').innerHTML="";
+            printer(arr);
+            console.log(arr);
+        }
+
+        if(sort_by=="Memory") {
+            arr= arr.sort((a,b)=>{
+            return b.Memory-a.Memory
+        });
+        document.getElementById('tbody').innerHTML="";
+        printer(arr);
+        //console.log(arr);
+        }
+
+        if(sort_by=="Price") {
+            arr= arr.sort((a,b)=>{
+            return b.Price-a.Price
+        });
+        document.getElementById('tbody').innerHTML="";
+        printer(arr);
+      //  console.log(arr);
+        }
+    }
+      }
+    
+   
+
+
+    
   
  function search(){
 
@@ -21,18 +116,18 @@ const arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':'15000'}
     var selectOptionValue=document.getElementById('dropdown').value;
 
 
-//samsung
-  if(item=='samsung'){
+     //samsung
+    if(item=='samsung'){
    var text2='<tr>';
     
-   text2+='<td>'+arr[0].Company+'</td>'+'<td>'+arr[0].Model+'</td>'+'<td>'+arr[0].Memory+'</td>'+'<td>'+arr[0].Price+'</td>';
+     text2+='<td>'+arr[0].Company+'</td>'+'<td>'+arr[0].Model+'</td>'+'<td>'+arr[0].Memory+'</td>'+'<td>'+arr[0].Price+'</td>';
     text2+='</tr>';
     
     document.getElementById('thead2').style.display="block";
     document.getElementById('display').style.display="block";
     document.getElementById('display').innerHTML=text2;
     
-}
+    }
 
 if(item=='Galaxy'){
     var text2='<tr>';
