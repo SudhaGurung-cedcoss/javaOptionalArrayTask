@@ -7,6 +7,8 @@ var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':'15000'},
 printer(arr);
 function printer(arr){
 
+
+    
     var text="";
     for (var i=0;i<arr.length;i++) {
         text+='<tr>';
@@ -18,6 +20,26 @@ function printer(arr){
     document.getElementById('tbody').innerHTML=text;
 
 }
+
+function addData(){
+    alert("hello");
+    push(arr);
+
+}
+
+ function push(arr){
+
+
+    var company=document.getElementById('companyInput').value;
+    alert(company);
+    var model=document.getElementById('modelInput').value;
+    var memory=document.getElementById('memoryInput').value;
+    var price=document.getElementById('priceInput').value;
+    arr.splice(2,0,{'Company':company,'Model':model,'Memory':memory,'Price':price});
+    alert(arr);
+    printer(arr);
+ }
+  
  
    function sorting(){
   
@@ -102,7 +124,8 @@ function printer(arr){
         printer(arr);
       //  console.log(arr);
         }
-    }
+     }
+
       }
     
    
