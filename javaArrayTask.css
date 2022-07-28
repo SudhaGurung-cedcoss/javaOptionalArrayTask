@@ -1,0 +1,19 @@
+
+
+table{
+    height: 50vh;
+    width: 65%;
+    border: 2px solid black;
+}
+
+tr:nth-child(even){
+    background-color: rgb(146, 238, 238);
+
+}
+thead {
+    background-color: burlywood;
+}
+
+td{
+    text-align: center;
+}
