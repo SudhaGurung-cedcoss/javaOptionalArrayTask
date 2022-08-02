@@ -45,6 +45,7 @@
                 <td id="model">Model</td>
                 <td id="Memory">Memory(GB)</td>
                 <td id="Price">Price(rs)</td>
+                <td id="Quantity">Quantity</td>
                
             </thead>
             <tbody id="tbody">
@@ -52,20 +53,6 @@
                
             </tbody>
         </table>
-        <select name="" id="sort" onchange="sorting()">
-            <option value="" class="option">---sort by---</option>
-            <option value="asc"  class="option">Ascending</option>
-            <option value="dsc"  class="option">Decending</option>
-           
-        </select>
-    
-        <select name="" id="sort_by" onchange="sorting()">
-            <option value="" class="option">---sort by---</option>
-            <option value="Company" class="option">Company</option>
-            <option value="Model" class="option">Model</option>
-            <option value="Memory" class="option">Memory(GB)</option>
-            <option value="Price" class="option">Price</option>
-        </select>
 
         <table>
             <tr>
@@ -90,6 +77,59 @@
                 <td><button onclick="addData()">Add</button></td>
             </tr>
            </table>
+     
+         <select name="" id="selectProduct"> 
+            <option value="">-----Select product----</option>
+            <option value="samsung">samsung</option>
+            <option value="Nokia">Nokia</option>
+            <option value="Apple">Apple</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Motarola">Motarola</option>
+        </select>
+       <input type="number" id="quantity">
+       <button onclick="add()">Add</button>
+       <button onclick="billGen()">Generate Bill</button>
+      
+    
+      
+   
+        <select name="" id="sort" onchange="sorting()">
+            <option value="" class="option">---sort by---</option>
+            <option value="asc"  class="option">Ascending</option>
+            <option value="dsc"  class="option">Decending</option>
+           
+        </select>
+    
+        <select name="" id="sort_by" onchange="sorting()">
+            <option value="" class="option">---sort by---</option>
+            <option value="Company" class="option">Company</option>
+            <option value="Model" class="option">Model</option>
+            <option value="Memory" class="option">Memory(GB)</option>
+            <option value="Price" class="option">Price</option>
+        </select>
+        <div id="showItem"></div>
+       <table id="table4">
+        <thead>
+            <tr>
+                <td>Bill</td>
+            </tr>
+            <tr>
+                <td>
+                    Description
+                </td>
+                <td>
+                    Quatity
+                </td>
+                <td>
+                    Amount
+                </td>
+            </tr>
+        </thead>
+        <tbody id="bill">
+
+        </tbody>
+
+       </table>
 
     <script src="javaArrayTask1.js"></script>
 

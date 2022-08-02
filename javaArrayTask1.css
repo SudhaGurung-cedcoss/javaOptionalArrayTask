@@ -1,10 +1,10 @@
 #table1{
     height: 50vh;
-    width: 38%;
+    width: 48%;
     border: 2px solid black;
-    margin-left: 460px;
-    margin-top: -180px;
-    
+    margin-left: 421px;
+    margin-top: -182px;
+
 }
 
 #table2{
@@ -65,4 +65,16 @@ td{
     background-color: rgb(146, 238, 238);
     font-size: 16px;
     font-family: ubuntu;
+}
+
+#table4{
+    width: 35%;
+    margin-top: 20px;
+    height: 20vh;
+    display: none;
+    
+}
+
+#table4 td{
+    height: 3vh;
 }
