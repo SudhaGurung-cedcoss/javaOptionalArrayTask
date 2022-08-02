@@ -1,8 +1,8 @@
-var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':15000,'Quantity':0},
-{'Company':'Nokia','Model':'S370','Memory':'128 ','Price':22000,'Quantity':0},
-{'Company':'Apple','Model':'S12','Memory':'64 ','Price':25000,'Quantity':0},
-{'Company':'Xiaomi','Model':'Note','Memory':'32 ','Price':12000,'Quantity':0},
-{'Company':'Motarola','Model':'G10','Memory':'32 ','Price':15000,'Quantity':0}];
+var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':15000,'Quantity':20},
+{'Company':'Nokia','Model':'S370','Memory':'128 ','Price':22000,'Quantity':15},
+{'Company':'Apple','Model':'S12','Memory':'64 ','Price':25000,'Quantity':21},
+{'Company':'Xiaomi','Model':'Note','Memory':'32 ','Price':12000,'Quantity':13},
+{'Company':'Motarola','Model':'G10','Memory':'32 ','Price':15000,'Quantity':18}];
 
 printer(arr);
 function printer(arr){
@@ -26,12 +26,12 @@ function addData(){
 
 
     var company=document.getElementById('companyInput').value;
-    alert(company);
+    //alert(company);
     var model=document.getElementById('modelInput').value;
     var memory=document.getElementById('memoryInput').value;
     var price=document.getElementById('priceInput').value;
     arr.splice(2,0,{'Company':company,'Model':model,'Memory':memory,'Price':price});
-    alert(arr);
+  //  alert(arr);
     printer(arr);
  }
 
@@ -44,11 +44,13 @@ function addData(){
 
     var selectProduct=document.getElementById('selectProduct').value;
     quantity=document.getElementById('quantity').value;
+    match(selectProduct);
     var value=searchIndex(selectProduct);
+   // printer(arr);
     var c=arr[value].Company;
     var p=arr[value].Price;
     var p1=searchItemExist(selectProduct);
-    alert(p1);
+   // alert(p1);
     if(p1==-1)
     {
     sumProduct={Company:c,Quantity:quantity,Amount:p};
@@ -65,6 +67,25 @@ function addData(){
     showData();
   }
 
+  function match(selectProduct){
+    var t=true;
+    for(let i=0;i<arr.length;i++)
+    {
+        if(arr[i].Company==selectProduct)
+        {
+            arr[i].Quantity=arr[i].Quantity-quantity;
+            if(arr[i].Quantity<0)
+            {
+                alert("out of stock");
+                t=false;
+              
+            }
+          if(t==false)
+          break;
+        }
+    }
+   printer(arr);
+  }
 
   function searchItemExist(selectProduct){
     for(let i=0;i<productArray.length;i++)
@@ -72,7 +93,7 @@ function addData(){
        // alert(selectProduct);
         if(productArray[i].Company==selectProduct)
         {
-          alert(selectProduct);
+         // alert(selectProduct);
           
 
            return i;
@@ -94,7 +115,7 @@ function addData(){
         
            // console.log("hello",productArray[i])
             textt+='<tr>'+'<td>'+productArray[i].Company+'</td>'+'<td>'+productArray[i].Quantity+'</td>'+'<td>'+productArray[i].Amount+'</td>'+'</tr>';
-            console.log("textt="+textt);
+          //  console.log("textt="+textt);
            
         
     }
