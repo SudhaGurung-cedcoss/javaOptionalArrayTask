@@ -46,6 +46,7 @@
                 <td id="Memory">Memory(GB)</td>
                 <td id="Price">Price(rs)</td>
                 <td id="Quantity">Quantity</td>
+                <td id="Rate">Rating</td>
                
             </thead>
             <tbody id="tbody">
@@ -86,6 +87,15 @@
             <option value="Xiaomi">Xiaomi</option>
             <option value="Motarola">Motarola</option>
         </select>
+        <select id="selectRating">
+            <option>---Select Rating--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        </select>
+        <button onclick="rate()">Rate</button>
        <input type="number" id="quantity">
        <button onclick="add()">Add</button>
        <button onclick="update()">Update</button>

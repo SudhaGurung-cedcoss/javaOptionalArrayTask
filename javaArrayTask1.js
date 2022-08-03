@@ -1,15 +1,15 @@
-var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':15000,'Quantity':20},
-{'Company':'Nokia','Model':'S370','Memory':'128 ','Price':22000,'Quantity':15},
-{'Company':'Apple','Model':'S12','Memory':'64 ','Price':25000,'Quantity':21},
-{'Company':'Xiaomi','Model':'Note','Memory':'32 ','Price':12000,'Quantity':13},
-{'Company':'Motarola','Model':'G10','Memory':'32 ','Price':15000,'Quantity':18}];
+var arr=[{'Company':'samsung','Model':'Galaxy','Memory':'64 ','Price':15000,'Quantity':20,'Rate':''},
+{'Company':'Nokia','Model':'S370','Memory':'128 ','Price':22000,'Quantity':15,'Rate':''},
+{'Company':'Apple','Model':'S12','Memory':'64 ','Price':25000,'Quantity':21,'Rate':''},
+{'Company':'Xiaomi','Model':'Note','Memory':'32 ','Price':12000,'Quantity':13,'Rate':''},
+{'Company':'Motarola','Model':'G10','Memory':'32 ','Price':15000,'Quantity':18,'Rate':''}];
 
 printer(arr);
 function printer(arr){
     var text="";
     for (var i=0;i<arr.length;i++) {
         text+='<tr>';
-        text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>'+'<td>'+arr[i].Quantity+'</td>';
+        text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>'+'<td>'+arr[i].Quantity+'</td>'+'<td>'+arr[i].Rate+'</td>';
      }
     //text+='<td>'+samsung[0].Company+'</td>'+'<td>'+samsung[0].Model+'</td>'+'<td>'+samsung[0]["Memory(GB)"]+'</td>'+'<td>'+samsung[0].Price+'</td>';
     text+='</tr>';
@@ -88,6 +88,26 @@ function addData(){
      printer(arr);
   }
 
+  function rate(){
+     selectCompany=document.getElementById('selectProduct').value; 
+     selectRating=document.getElementById('selectRating').value;
+      
+     assignRate(selectCompany,selectRating);
+  }
+
+  function assignRate(selectCompany,selectRating){
+    for(let i=0;i<arr.length;i++)
+    {
+      
+        if(arr[i].Company==selectCompany)
+        {
+          
+            arr[i].Rate=selectRating;
+          
+        }
+    }
+    printer(arr);
+  }
 
   function updatingValues(selectCompany){
  
