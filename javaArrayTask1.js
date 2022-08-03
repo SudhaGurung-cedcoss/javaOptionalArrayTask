@@ -87,11 +87,10 @@ function addData(){
     }
      printer(arr);
   }
-
+//rating
   function rate(){
      selectCompany=document.getElementById('selectProduct').value; 
-     selectRating=document.getElementById('selectRating').value;
-      
+     selectRating=document.getElementById('selectRating').value; 
      assignRate(selectCompany,selectRating);
   }
 
@@ -174,6 +173,25 @@ function addData(){
     }
     document.getElementById('bill').innerHTML+=billgenerate;
 }
+
+
+function searchMaxAndMinProduct(){
+    
+    
+   
+    var retObjs=arr.filter(maxAndMinRangeProduct);  
+    printer(retObjs);
+    
+
+}
+
+function maxAndMinRangeProduct(obj){
+    maxPriceProduct=document.getElementById('maxPriceProduct').value;
+    minPriceProduct=document.getElementById('minPriceProduct').value;
+    if(obj.Price>=minPriceProduct && obj.Price<=maxPriceProduct)
+    return obj;
+}
+
 
  //performing sorting
    function sorting(){
