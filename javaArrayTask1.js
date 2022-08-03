@@ -9,7 +9,7 @@ function printer(arr){
     var text="";
     for (var i=0;i<arr.length;i++) {
         text+='<tr>';
-        text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>'+'<td>'+arr[i].Quantity+'</td>';/*+'<td>'+arr[i].Rate+'</td>'*/
+        text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>';/*+'<td>'+arr[i].Quantity+'</td>';+'<td>'+arr[i].Rate+'</td>'*/
      }
     //text+='<td>'+samsung[0].Company+'</td>'+'<td>'+samsung[0].Model+'</td>'+'<td>'+samsung[0]["Memory(GB)"]+'</td>'+'<td>'+samsung[0].Price+'</td>';
     text+='</tr>';
@@ -17,7 +17,8 @@ function printer(arr){
    }
 
 function addData(){
-        alert("hello");
+       // alert("hello");
+
         push(arr);
 
   }
@@ -26,13 +27,24 @@ function addData(){
 
 
     var company=document.getElementById('companyInput').value;
+
+
     //alert(company);
     var model=document.getElementById('modelInput').value;
+  
     var memory=document.getElementById('memoryInput').value;
     var price=document.getElementById('priceInput').value;
-    arr.splice(2,0,{'Company':company,'Model':model,'Memory':memory,'Price':price});
+  
     //  alert(arr);
-    printer(arr);
+    if((company && model && price && memory)=="")
+    {
+        alert("enter values");
+    }
+    else{
+        arr.splice(2,0,{'Company':company,'Model':model,'Memory':memory,'Price':price});
+        printer(arr);
+    }
+  
   }
 
 
