@@ -288,12 +288,13 @@ function maxAndMinRangeProduct(obj){
   //searchin element
  function search(){
 
-    var item=document.getElementById('searchItem').value;
-    var selectOptionValue=document.getElementById('dropdown').value;
+    item=document.getElementById('searchItem').value;
+    selectOptionValue=document.getElementById('dropdown').value;
 
 
-     if(item!=arr[selectOptionValue].Company)
+     if(item!=('samsung' || 'Nokia' || 'Apple' || 'Xiaomi' || 'Motarola'))
      {
+        document.getElementById('table2').style.display="none";
         alert("item is not there");
      }
      else{
@@ -301,6 +302,9 @@ function maxAndMinRangeProduct(obj){
      }
     }
   function  checkItem(){
+    item=document.getElementById('searchItem').value;
+ selectOptionValue=document.getElementById('dropdown').value;
+
      //samsung
     if(item=='samsung'){
    var text2='<tr>';
