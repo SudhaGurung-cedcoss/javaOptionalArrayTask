@@ -12,15 +12,15 @@ function printer(arr){
         text+='<td>'+arr[i].Company+'</td>'+'<td>'+arr[i].Model+'</td>'+'<td>'+arr[i].Memory+'</td>'+'<td>'+arr[i].Price+'</td>'+'<td>'+arr[i].Quantity+'</td>';
      }
     //text+='<td>'+samsung[0].Company+'</td>'+'<td>'+samsung[0].Model+'</td>'+'<td>'+samsung[0]["Memory(GB)"]+'</td>'+'<td>'+samsung[0].Price+'</td>';
-     text+='</tr>';
+    text+='</tr>';
     document.getElementById('tbody').innerHTML=text;
    }
 
 function addData(){
-    alert("hello");
-    push(arr);
+        alert("hello");
+        push(arr);
 
-}
+  }
 
  function push(arr){
 
@@ -31,45 +31,47 @@ function addData(){
     var memory=document.getElementById('memoryInput').value;
     var price=document.getElementById('priceInput').value;
     arr.splice(2,0,{'Company':company,'Model':model,'Memory':memory,'Price':price});
-  //  alert(arr);
+    //  alert(arr);
     printer(arr);
- }
+  }
 
 
     var sumProduct;
     var productArray=[];
     var totalAmount=0;
     var totalQuantity=0;
-    function add(){
 
+   //add items
+    function add(){
     var selectProduct=document.getElementById('selectProduct').value;
     quantity=document.getElementById('quantity').value;
     match(selectProduct);
     var value=searchIndex(selectProduct);
-   // printer(arr);
     var c=arr[value].Company;
     var p=arr[value].Price;
     var p1=searchItemExist(selectProduct);
-   // alert(p1);
     if(p1==-1)
     {
-    sumProduct={Company:c,Quantity:quantity,Amount:p};
-    productArray.push(sumProduct);
-
-    console.log(productArray);
+        sumProduct={Company:c,Quantity:quantity,Amount:p};
+        productArray.push(sumProduct);
+        console.log(productArray);
      }
     else{
         productArray[p1].Quantity=parseInt(productArray[p1].Quantity)+parseInt(quantity);
-
         productArray[p1].Amount=parseInt(productArray[p1].Amount)*parseInt(quantity);
     }
-
-    showData();
+       showData();
   }
 
+  //update values
+   function update() {
+        var selectCompany=document.getElementById('selectProduct').value;
+        quantity=document.getElementById('quantity').value;
+        updatingValues(selectCompany);
+   }
   function match(selectProduct){
-    var t=true;
-    for(let i=0;i<arr.length;i++)
+     var t=true;
+     for(let i=0;i<arr.length;i++)
     {
         if(arr[i].Company==selectProduct)
         {
@@ -78,15 +80,30 @@ function addData(){
             {
                 alert("out of stock");
                 t=false;
-              
             }
           if(t==false)
           break;
         }
     }
-   printer(arr);
+     printer(arr);
   }
 
+
+  function updatingValues(selectCompany){
+ 
+    for(let i=0;i<arr.length;i++)
+    {
+      
+        if(arr[i].Company==selectCompany)
+        {
+          
+            arr[i].Quantity=quantity;
+          
+        }
+    }
+    printer(arr);
+  }
+  //check the item is exist
   function searchItemExist(selectProduct){
     for(let i=0;i<productArray.length;i++)
     {
@@ -94,30 +111,22 @@ function addData(){
         if(productArray[i].Company==selectProduct)
         {
          // alert(selectProduct);
-          
-
-           return i;
-        }
-       
-       
+         return i;
+        } 
     }
     return -1;
   }
-
+//showing data
   function showData()
   {
-    console.log("pa:",productArray);
-   
+    //console.log("pa:",productArray);
     var textt="";
     for(i=0;i<productArray.length;i++)
     {
-
-        
            // console.log("hello",productArray[i])
             textt+='<tr>'+'<td>'+productArray[i].Company+'</td>'+'<td>'+productArray[i].Quantity+'</td>'+'<td>'+productArray[i].Amount+'</td>'+'</tr>';
           //  console.log("textt="+textt);
-           
-        
+              
     }
     document.getElementById('table4').style.display="block";
     document.getElementById('bill').innerHTML=textt ;
@@ -125,7 +134,7 @@ function addData(){
   }
 
 
-  
+  //searching index
   function searchIndex(selectOption){
     for(i=0;i<arr.length;i++)
     {
@@ -135,38 +144,18 @@ function addData(){
     }
   }
 
-
+//generating bill
   function billGen(){
    var billgenerate="";
-    for(i=0;i<productArray.length;i++)
-    {
-         totalQuantity+=parseInt(productArray[i].Quantity);
-         totalAmount+=parseInt(productArray[i].Amount);
-        billgenerate='<tr>'+'<td>'+"total"+'</td>'+'<td>'+totalQuantity+'</td>'+'<td>'+totalAmount+'</td>'+'</tr>';
-            
+    for(i=0;i<productArray.length;i++) {
+            totalQuantity+=parseInt(productArray[i].Quantity);
+            totalAmount+=parseInt(productArray[i].Amount);
+            billgenerate='<tr>'+'<td>'+"total"+'</td>'+'<td>'+totalQuantity+'</td>'+'<td>'+totalAmount+'</td>'+'</tr>';
     }
     document.getElementById('bill').innerHTML+=billgenerate;
 }
 
- 
-
-    
-
-
-     
-      
-
- 
-
-
-
-  
-
-  
-
-
-    
- 
+ //performing sorting
    function sorting(){
   
     var sort=document.getElementById('sort').value;
@@ -257,7 +246,7 @@ function addData(){
 
 
     
-  
+  //searchin element
  function search(){
 
     var item=document.getElementById('searchItem').value;
