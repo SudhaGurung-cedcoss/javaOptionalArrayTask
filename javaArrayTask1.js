@@ -203,7 +203,7 @@ function maxAndMinRangeProduct(obj){
       if(sort=="-1")
         sort_by="Company";
         if(sort=="asc"){
-            if(sort_by=="Company" || sort_by=="Model") {
+            if(sort_by=="Company" ) {
                 arr= arr.sort((a,b)=>{
                 let companyA=a.Company.toLowerCase();
                 let companyB=b.Company.toLowerCase();
@@ -221,6 +221,24 @@ function maxAndMinRangeProduct(obj){
             console.log(arr);
             }
 
+
+            if(sort_by=="Model" ) {
+                arr= arr.sort((a,b)=>{
+                let companyA=a.Model.toLowerCase();
+                let companyB=b.Model.toLowerCase();
+        
+                if (companyA < companyB) {
+                    return -1;
+                }
+                if (companyA > companyB) {
+                    return 1;
+                }
+                return 0;
+            });
+            document.getElementById('tbody').innerHTML="";
+            printer(arr);
+            console.log(arr);
+            }
 
             if(sort_by=="Memory") {
                 arr= arr.sort((a,b)=>{
@@ -242,7 +260,7 @@ function maxAndMinRangeProduct(obj){
         }
 
         if(sort=="dsc"){
-            if(sort_by=="Company" || sort_by=="Model"){
+            if(sort_by=="Company" ){
            arr= arr.sort((a,b)=>{
                 let companyA=a.Company.toLowerCase();
                 let companyB=b.Company.toLowerCase();
@@ -259,7 +277,25 @@ function maxAndMinRangeProduct(obj){
             printer(arr);
             console.log(arr);
         }
+        
 
+        if(sort_by=="Model" ) {
+            arr= arr.sort((a,b)=>{
+            let companyA=a.Model.toLowerCase();
+            let companyB=b.Model.toLowerCase();
+    
+            if (companyA > companyB) {
+                return -1;
+            }
+            if (companyA < companyB) {
+                return 1;
+            }
+            return 0;
+        });
+        document.getElementById('tbody').innerHTML="";
+        printer(arr);
+        console.log(arr);
+        }
         if(sort_by=="Memory") {
             arr= arr.sort((a,b)=>{
             return b.Memory-a.Memory
